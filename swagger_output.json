@@ -1,0 +1,94 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Domucmentação API Museu",
+    "description": "Descrição de como utilizar as endpoints da API.",
+    "version": "1.0.0"
+  },
+  "host": "http://localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Visitantes",
+      "description": "Rotas do visitante"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/visitantes/total-por-genero": {
+      "get": {
+        "tags": [
+          "Visitantes"
+        ],
+        "summary": "Traz o total por genero",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Visitante": {
+      "type": "object",
+      "properties": {
+        "visitante_nome": {
+          "type": "string",
+          "example": "Natasha"
+        },
+        "visitante_cpf": {
+          "type": "string",
+          "example": "000.000.000-00"
+        },
+        "visitante_profissao": {
+          "type": "string",
+          "example": "designer"
+        },
+        "visitante_cidade": {
+          "type": "string",
+          "example": "fortaleza"
+        },
+        "visitante_bairro": {
+          "type": "string",
+          "example": "jose de alencar"
+        },
+        "visitante_genero": {
+          "type": "string",
+          "example": "feminino"
+        },
+        "visitante_data": {
+          "type": "string",
+          "example": "2024-03-02 11:47:00"
+        },
+        "visitante_status": {
+          "type": "boolean",
+          "example": false
+        }
+      },
+      "required": [
+        "visitante_nome",
+        "visitante_cpf",
+        "visitante_profissao",
+        "visitante_cidade",
+        "visitante_bairro",
+        "visitante_genero",
+        "visitante_data",
+        "visitante_status"
+      ]
+    }
+  }
+}
